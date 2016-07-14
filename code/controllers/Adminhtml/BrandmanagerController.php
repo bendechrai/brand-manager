@@ -129,8 +129,8 @@ class BenDechrai_BrandManager_Adminhtml_BrandmanagerController extends Mage_Admi
       $data = array(
         'bd_bm_description' => trim($brand->getDescription()),
         'bd_bm_image' => $brand->getImage(),
-        'bd_bm_description_empty' => (trim($brand->getDescription())==''),
-        'bd_bm_image_empty' => (trim($brand->getImage())==''),
+        'bd_bm_description_available' => (trim($brand->getDescription())!='' ? '1' : '0'),
+        'bd_bm_image_available' => (trim($brand->getImage())!='' ? '1' : '0'),
       );
       $productIds = Mage::getModel('catalog/product')
         ->getCollection()
