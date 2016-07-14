@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <catalog>
+            <children>
+                <bendechrai_brandmanager module="bendechrai_brandmanager">
+                    <title>Manage Brands</title>
+                    <sort_order>17</sort_order>
+                    <action>bendechrai/adminhtml_brandmanager/index</action>
+                </bendechrai_brandmanager>
+            </children>
+        </catalog>
+    </menu>
+    <acl>
+        <resources>
+            <all>
+                <title>All</title>
+            </all>
+            <admin>
+                <children>
+                    <catalog>
+                        <children>
+                            <bendechrai_brandmanager>
+                                <title>Manage Brands</title>
+                                <sort_order>50</sort_order>
+                            </bendechrai_brandmanager>
+                        </children>
+                    </catalog>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

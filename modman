@@ -1,0 +1,2 @@
+code                 app/code/local/BenDechrai/BrandManager
+module.xml           app/etc/modules/BenDechrai_BrandManager.xml
