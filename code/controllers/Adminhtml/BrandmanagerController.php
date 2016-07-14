@@ -83,11 +83,10 @@ class BenDechrai_BrandManager_Adminhtml_BrandmanagerController extends Mage_Admi
 
       $id = $this->getRequest()->getPost('brand_id');
       $data = $this->getRequest()->getPost();
-      unset($data['name']); // Don't allow this to be set here
-
-      // Update brand
       $brand = Mage::getModel('bendechrai_brandmanager/brand')->load($id);
-      $brand->setData($data);
+
+      // Update description
+      $brand->setDescription($data['description']);
 
       // Handle image
       if(isset($data['image']) && isset($data['image']['delete']) && $data['image']['delete']) {
