@@ -126,12 +126,18 @@ class BenDechrai_BrandManager_Adminhtml_BrandmanagerController extends Mage_Admi
       }
 
       // Update all products that link to this brand
+      $data = array(
+        'bd_bm_description' => trim($brand->getDescription()),
+        'bd_bm_image' => $brand->getImage(),
+        'bd_bm_description_empty' => (trim($brand->getDescription())==''),
+        'bd_bm_image_empty' => (trim($brand->getImage())==''),
+      );
       $productIds = Mage::getModel('catalog/product')
         ->getCollection()
         ->addAttributeToFilter('brand', $brand->getProductBrandId())
         ->getAllIds();
       $updater = Mage::getSingleton('catalog/product_action');    
-      $updater->updateAttributes($productIds, array('bd_bm_description'=>$brand->getDescription(), 'bd_bm_image'=>$brand->getImage()), 0);
+      $updater->updateAttributes($productIds, $data, 0);
 
     }
 
