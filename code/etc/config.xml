@@ -62,5 +62,15 @@
                 <class>BenDechrai_BrandManager_Helper</class>
             </bendechrai_brandmanager>
         </helpers>
+        <events>
+            <catalog_product_save_before>
+                <observers>
+                    <bendechrai_brandmanager>
+                        <class>BenDechrai_BrandManager_Model_Observer</class>
+                        <method>catalogProductSaveBefore</method>
+                    </bendechrai_brandmanager>
+                </observers>
+            </catalog_product_save_before>
+        </events>
     </global>
 </config>
