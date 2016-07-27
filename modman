@@ -1,2 +1,4 @@
 code                 app/code/local/BenDechrai/BrandManager
+design/frontend.xml  app/design/frontend/base/default/layout/bendechrai_brandmanager.xml
+design/frontend      app/design/frontend/base/default/template/bendechrai_brandmanager
 module.xml           app/etc/modules/BenDechrai_BrandManager.xml

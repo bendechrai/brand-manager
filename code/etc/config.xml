@@ -16,6 +16,46 @@
             </bendechrai>
         </routers>
     </admin>
+    <frontend>
+        <routers>   
+            <brandmanager>
+                <use>standard</use>
+                <args>
+                    <module>BenDechrai_BrandManager</module>
+                    <frontName>brandmanager</frontName>
+                </args>
+            </brandmanager>
+        </routers>
+        <layout>
+            <updates>
+                <brandmanager>
+                    <file>bendechrai_brandmanager.xml</file>
+                </brandmanager>
+            </updates>
+        </layout>
+    </frontend>
+    <default>
+        <web>
+            <routers>
+                <bendechrai_brandmanager>
+                    <area>frontend</area>
+                    <class>BenDechrai_BrandManager_Controller_Router</class>
+                </bendechrai_brandmanager>
+            </routers>
+        </web>
+    </default>
+    <stores>
+        <default>
+            <web>
+                <routers>
+                    <bendechrai_brandmanager>
+                        <area>frontend</area>
+                        <class>BenDechrai_BrandManager_Controller_Router</class>
+                    </bendechrai_brandmanager>
+                </routers>
+            </web>
+        </default>
+    </stores>
     <global>
         <models>
             <bendechrai_brandmanager>
@@ -56,6 +96,11 @@
             <bendechrai_brandmanager>
                 <class>BenDechrai_BrandManager_Block</class>
             </bendechrai_brandmanager>
+            <catalog>
+                <rewrite>
+                    <product_list>BenDechrai_BrandManager_Block_Catalog_Product_List</product_list>
+                </rewrite>
+            </catalog>
         </blocks>
         <helpers>
             <bendechrai_brandmanager>
