@@ -34,6 +34,13 @@ class BenDechrai_BrandManager_Block_Adminhtml_Brands_Edit_Tab_Info extends Mage_
       . '</span>',
     ));
 
+    $urlkeyField = $fieldset->addField('urlkey', 'text', array(
+      'name' => 'urlkey',
+      'label' => Mage::helper('bendechrai_brandmanager')->__('URL Key'),
+      'title' => Mage::helper('bendechrai_brandmanager')->__('URL Key'),
+      'required' => true,
+    ));
+
     $descriptionField = $fieldset->addField('description', 'textarea', array(
       'name' => 'description',
       'label' => Mage::helper('bendechrai_brandmanager')->__('Description'),

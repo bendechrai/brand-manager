@@ -32,6 +32,13 @@ class BenDechrai_BrandManager_Block_Adminhtml_Brands_Grid extends Mage_Adminhtml
       'index'     => 'brand_id',
     ));
 
+    $this->addColumn('urlkey', array(
+      'header'    => Mage::helper('bendechrai_brandmanager')->__('URL Key'),
+      'align'     =>'left',
+      'width'     => '50',
+      'index'     => 'urlkey',
+    ));
+
     $this->addColumn('image', array(
       'header'    => Mage::helper('bendechrai_brandmanager')->__('Image'),
       'align'     =>'left',
