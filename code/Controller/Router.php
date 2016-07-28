@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * BenDechrai_BrandManager extension
+ * @category   BenDechrai
+ * @package    BenDechrai_BrandManager
+ * @copyright  Ben Dechrai
+ * @author     Ben Dechrai <ben@dechrai.com> https://bendechrai.com.
+ */
+
 class BenDechrai_BrandManager_Controller_Router extends Mage_Core_Controller_Varien_Router_Standard {
 
   public function controllerFrontInitRouters($observer) {
