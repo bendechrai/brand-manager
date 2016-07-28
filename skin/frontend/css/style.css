@@ -1,0 +1,35 @@
+.block-brands .brand {
+  display: block;
+  margin: 1em 0 0 0;
+  padding: 1em;
+  box-sizing: border-box;
+  min-height: 150px;
+  box-shadow: 0px 0px 4px #000 inset;
+  color: #666;
+}
+@media screen and (min-width: 640px) {
+  .block-brands .brand {
+    float: left;
+    width: 49%;
+    margin: 1em 1% 0 0;
+  }
+}
+.block-brands .brand:hover {
+  color: #000;
+}
+.block-brands .brand:nth-child(2n+1) {
+  clear: both;
+}
+
+.block-brands .brand .logo {
+  float: right;
+  width: 30%;
+  max-height: 100px;
+  margin: 0 0 0.5em 1em;
+}
+.block-brands .brand .title {
+  font-size: 150%;
+}
+.block-brands .brand .description {
+  clear: both;
+}
