@@ -3,7 +3,7 @@
     <modules>
         <BenDechrai_BrandManager>
             <active>true</active>
-            <codePool>local</codePool>
+            <codePool>community</codePool>
         </BenDechrai_BrandManager>
     </modules>
 </config>
