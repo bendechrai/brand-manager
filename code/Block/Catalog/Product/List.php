@@ -13,7 +13,9 @@ class BenDechrai_BrandManager_Block_Catalog_Product_List extends Mage_Catalog_Bl
     protected function _getProductCollection()
     {       
         parent::_getProductCollection();
-        $this->_productCollection->addAttributeToFilter('brand', Mage::registry('brand')->getProductBrandId());
+        if(Mage::registry('brand')) {
+            $this->_productCollection->addAttributeToFilter('brand', Mage::registry('brand')->getProductBrandId());
+        }
         return $this->_productCollection;
     }
     
