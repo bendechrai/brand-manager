@@ -85,9 +85,10 @@ class BenDechrai_BrandManager_Adminhtml_BrandmanagerController extends Mage_Admi
       $data = $this->getRequest()->getPost();
       $brand = Mage::getModel('bendechrai_brandmanager/brand')->load($id);
 
-      // Update description and urlkey
+      // Update non image settings
       $brand->setDescription($data['description']);
       $brand->setUrlkey($data['urlkey']);
+      $brand->setShowInFront($data['show_in_front']?1:0);
 
       // Handle image
       if(isset($data['image']) && isset($data['image']['delete']) && $data['image']['delete']) {

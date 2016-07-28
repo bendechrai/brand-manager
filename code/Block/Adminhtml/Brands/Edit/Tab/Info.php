@@ -55,6 +55,14 @@ class BenDechrai_BrandManager_Block_Adminhtml_Brands_Edit_Tab_Info extends Mage_
       'required' => false,
     ));
 
+    $showInFrontField = $fieldset->addField('show_in_front', 'checkbox', array(
+      'name' => 'show_in_front',
+      'label' => Mage::helper('bendechrai_brandmanager')->__('Show In Front?'),
+      'title' => Mage::helper('bendechrai_brandmanager')->__('Show In Front?'),
+      'checked' => $brand->getShowInFront(),
+      'value' => 1,
+    ));
+
     $brandField = $fieldset->addField('brand_id', 'hidden', array(
       'name' => 'brand_id',
     ));

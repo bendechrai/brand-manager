@@ -4,15 +4,17 @@
     </div>
     <div class="body">
         <?php foreach(Mage::registry('brands') as $brand): ?>
-            <div class="brand">
-                <div class="logo">
-                    <?php if(trim($brand->getImage())!='') : ?>
-                        <a href="/brands/<?=$brand->getUrlkey() . Mage::getStoreConfig('catalog/seo/product_url_suffix')?>" title="<?=$this->escapeHtml($brand->getName())?>"><img src="<?=Mage::getBaseUrl('media') . $brand->getImage() ?>" title="<?=$this->escapeHtml($brand->getName())?>" alt="Logo for <?=$this->escapeHtml($brand->getName())?>" /></a>
-                    <?php endif; ?>
-                </div>
+            <?php if($brand->getShowInFront()): ?>
+                <div class="brand">
+                    <div class="logo">
+                        <?php if(trim($brand->getImage())!='') : ?>
+                            <a href="/brands/<?=$brand->getUrlkey() . Mage::getStoreConfig('catalog/seo/product_url_suffix')?>" title="<?=$this->escapeHtml($brand->getName())?>"><img src="<?=Mage::getBaseUrl('media') . $brand->getImage() ?>" title="<?=$this->escapeHtml($brand->getName())?>" alt="Logo for <?=$this->escapeHtml($brand->getName())?>" /></a>
+                        <?php endif; ?>
+                    </div>
                 <div class="title"><a href="/brands/<?=$brand->getUrlkey() . Mage::getStoreConfig('catalog/seo/product_url_suffix')?>" title="<?=$this->escapeHtml($brand->getName())?>"><?=$this->escapeHtml($brand->getName())?></a></div>
-                <div class="description"><a href="/brands/<?=$brand->getUrlkey() . Mage::getStoreConfig('catalog/seo/product_url_suffix')?>" title="<?=$this->escapeHtml($brand->getName())?>"><?=$brand->getDescription()?></a></div>
-            </div>
+                    <div class="description"><a href="/brands/<?=$brand->getUrlkey() . Mage::getStoreConfig('catalog/seo/product_url_suffix')?>" title="<?=$this->escapeHtml($brand->getName())?>"><?=$brand->getDescription()?></a></div>
+                </div>
+            <?php endif; ?>
         <?php endforeach; ?>
     </div>
 </div>

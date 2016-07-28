@@ -60,6 +60,18 @@ class BenDechrai_BrandManager_Block_Adminhtml_Brands_Grid extends Mage_Adminhtml
       'index'     => 'description',
     ));
 
+    $this->addColumn('show_in_front', array(
+      'header'    => Mage::helper('bendechrai_brandmanager')->__('Show In Front?'),
+      'width'     => '50',
+      'align'     => 'center',
+      'index'     => 'show_in_front',
+      'type'      => 'options',
+      'options'   => array(
+        '0' => 'Hide',
+        '1' => 'Show',
+      ),
+    ));
+
     $this->addColumn('action',
       array(
         'header'    =>  Mage::helper('bendechrai_brandmanager')->__('Action'),
