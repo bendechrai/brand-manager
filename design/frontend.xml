@@ -1,5 +1,21 @@
 <?xml version="1.0"?>
 <layout version="1.0">
+    <cms_index_index>
+        <reference name="head">
+            <action method="addItem"><type>skin_css</type><name>bendechrai_brandmanager/css/style.css</name><params/></action>
+        </reference>
+        <reference name="left">
+            <block type="core/template" name="bd_bm_bbb" template="bendechrai_brandmanager/browse-by-brand.phtml" before="categories-left"/>
+        </reference>
+    </cms_index_index>
+    <catalog_category_view>
+        <reference name="head">
+            <action method="addItem"><type>skin_css</type><name>bendechrai_brandmanager/css/style.css</name><params/></action>
+        </reference>
+        <reference name="left">
+            <block type="core/template" name="bd_bm_bbb" template="bendechrai_brandmanager/browse-by-brand.phtml" before="-"/>
+        </reference>
+    </catalog_category_view>
     <brandmanager_index_index>
         <reference name="root">
             <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
@@ -9,6 +25,9 @@
         </reference>
         <reference name="content">
             <block type="core/template" name="brand_index" template="bendechrai_brandmanager/list.phtml" before="-"/>
+        </reference>
+        <reference name="left">
+            <block type="core/template" name="bd_bm_bbc" template="bendechrai_brandmanager/browse-by-category.phtml" before="-"/>
         </reference>
     </brandmanager_index_index>
     <brandmanager_index_view>
@@ -28,6 +47,9 @@
                 <action method="addColumnCountLayoutDepend"><layout>three_columns</layout><count>3</count></action>
                 <action method="setToolbarBlockName"><name>product_list_toolbar</name></action>
             </block>
+        </reference>
+        <reference name="left">
+            <block type="core/template" name="bd_bm_bbc" template="bendechrai_brandmanager/browse-by-category.phtml" before="-"/>
         </reference>
     </brandmanager_index_view>
 </layout>
